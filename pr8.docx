@@ -13,7 +13,7 @@
 #include <time.h>
 int _tmain()
 {
-int A[20];
+int A1[20];
 int i, j, s=0;
 srand (time(NULL)); // инициализация генератора случайных чисел
 SetConsoleOutputCP(1251); //подключение русс яз
