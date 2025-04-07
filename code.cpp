@@ -2,66 +2,84 @@
 #include <stdio.h>
 
 int main() {
-  int a1; // переменная a
-  int b1;
-  int c1;
-  int d1;
+int a1; // переменная a
+int b1;
+int c1;
+int d1;
 
-  int M[10];
-  for (int i = 0; i < 10; i++) {
-    M[i] = i;
-    printf("%d", M[i]);
-  }
+// Объявление и инициализация массива
+int myArray[] = {-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6};
+int arraySize = sizeof(myArray) / sizeof(myArray)[0];
 
-  printf("Enter four integers: ");
-  scanf("%d %d %d %d", &a1, &b1, &c1, &d1);
+printf("Содержимое массива:\n");
+for (int i = 0; i < arraySize; i++) {
+    printf("%d ", myArray);
+}
+printf("\n\n");
 
-  if (a1 > 0) {
+printf("Положительные числа из массива:\n");
+for (int i = 0; i < arraySize; i++) {
+    if (myArray > 0) {
+        printf("%d ", myArray);
+    }
+}
+printf("\n\n");
+
+printf("Enter four integers: ");
+scanf("%d %d %d %d", &a1, &b1, &c1, &d1);
+
+if (a1 > 0) {
     printf("The first entered number (%d) is positive.\n", a1);
-  } else if (a1 == 0) {
+}
+else if (a1 == 0) {
     printf("The first entered number (%d) is zero.\n", a1);
-  } else {
+}
+else {
     printf("The first entered number (%d) is negative.\n", a1);
-  }
+}
 
-  if (a1 % 2 != 0 && a1 < 0) {
+if (a1 % 2 != 0 && a1 < 0) {
     int min = a1;
-    // Проверяем, является ли b1 нечетным, отрицательным и меньше текущего
-    // минимума
+    // Проверяем, является ли b1 нечетным, отрицательным и меньше текущего минимума
     if (b1 % 2 != 0 && b1 < 0 && min > b1) {
-      min = b1;
+        min = b1;
     }
     if (c1 % 2 != 0 && c1 < 0 && min > c1) {
-      min = c1;
+        min = c1;
     }
     if (d1 % 2 != 0 && d1 < 0 && min > d1) {
-      min = d1;
+        min = d1;
     }
     printf("The minimum odd negative number: %d\n", min);
-  } else if (b1 % 2 != 0 && b1 < 0) {
+}
+else if (b1 % 2 != 0 && b1 < 0) {
     int min = b1;
-    // Проверяем, является ли c1 нечетным, отрицательным и меньше текущего
-    // минимума
+    // Проверяем, является ли c1 нечетным, отрицательным и меньше текущего минимума
     if (c1 % 2 != 0 && c1 < 0 && min > c1) {
-      min = c1;
+        min = c1;
     }
     if (d1 % 2 != 0 && d1 < 0 && min > d1) {
-      min = d1;
+        min = d1;
     }
-	printf("oTRISASEL CHISLA: ");
+    printf("The minimum odd negative number: %d\n", min);
+}
+else if (c1 % 2 != 0 && c1 < 0) {
+    int min = c1;
+    // Проверяем, является ли d1 нечетным, отрицательным и меньше текущего минимума
+    if (d1 % 2 != 0 && d1 < 0 && min > d1) {
+        min = d1;
+    }
+    printf("The minimum odd negative number: %d\n", min);
+}
+else if (d1 % 2 != 0 && d1 < 0) {
+    printf("The minimum odd negative number: %d\n", d1);
+}
+else
+{
+    printf("The minimum odd negative number was not found\n");
+}
 
-	if (a1<0) {
-			printf("1 chislo:", a1);	
-	}
-	if (b1<0) {
-			printf("2 chislo:", b1);	
-	}
-	if (c1<0) {
-			printf("3 chislo:", c1);	
-	}
-	if (d1<0) {
-			printf("4 chislo:", d1);	
-	}
+return 0;
 
-    return 0;
+
 }
