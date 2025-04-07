@@ -60,6 +60,20 @@ int main() {
     {
         printf("The minimum odd negative number was not found\n");
     }
+	printf("oTRISASEL CHISLA: ");
+
+	if (a1<0) {
+			printf("1 chislo:", a1);	
+	}
+	if (b1<0) {
+			printf("2 chislo:", b1);	
+	}
+	if (c1<0) {
+			printf("3 chislo:", c1);	
+	}
+	if (d1<0) {
+			printf("4 chislo:", d1);	
+	}
 
     return 0;
 
